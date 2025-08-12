@@ -1,0 +1,64 @@
+{
+  "name": "web-spider-cli",
+  "version": "1.0.0",
+  "description": "A concurrent web spider/crawler for downloading web pages recursively with modern TypeScript architecture",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "bin": {
+    "web-spider": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "cli": "npm run build && node dist/cli.js",
+    "search": "npm run build && node dist/cli.js",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf dist"
+  },
+  "author": "Fred <your-email@example.com>",
+  "license": "MIT",
+  "keywords": [
+    "web-crawler",
+    "spider",
+    "concurrent",
+    "typescript",
+    "cli",
+    "functional",
+    "scraper",
+    "downloader"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/web-spider.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/web-spider/issues"
+  },
+  "homepage": "https://github.com/your-username/web-spider#readme",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "chalk": "^5.5.0",
+    "cheerio": "^1.1.2",
+    "commander": "^14.0.0",
+    "jsdom": "^26.1.0",
+    "listr2": "^9.0.1",
+    "mkdirp": "^3.0.1",
+    "p-queue": "^8.1.0",
+    "slug": "^11.0.0",
+    "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.35",
+    "@types/jsdom": "^21.1.7",
+    "@types/mkdirp": "^1.0.2",
+    "@types/node": "^24.2.1",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
